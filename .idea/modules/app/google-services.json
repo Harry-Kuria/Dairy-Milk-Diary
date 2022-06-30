@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "912869749740",
+    "firebase_url": "https://milkdiary-collector.firebaseio.com",
+    "project_id": "milkdiary-collector",
+    "storage_bucket": "milkdiary-collector.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912869749740:android:b77df23ee7cf06ab0e06c9",
+        "android_client_info": {
+          "package_name": "com.example.milkdiary_collector"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912869749740-08kmhnkujhi9fgej8ur5uql5rbt0ehug.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmf_sm1k0BRVy4__Cnr6HpYo1niMRuQH0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "912869749740-08kmhnkujhi9fgej8ur5uql5rbt0ehug.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912869749740:android:3748ddffd158746d0e06c9",
+        "android_client_info": {
+          "package_name": "ultramodern.activity.milkdiary_collector"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912869749740-kur0uvg3b93e08e8cf4l3mg9si721i7p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ultramodern.activity.milkdiary_collector",
+            "certificate_hash": "66f668b58c173846aa80aa2adb352467dbafffb1"
+          }
+        },
+        {
+          "client_id": "912869749740-pi43s8nv895pj6m1g61kp9pjb98dluec.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ultramodern.activity.milkdiary_collector",
+            "certificate_hash": "b2b14d511a3f0a303ed6d938e6b05751a31c6741"
+          }
+        },
+        {
+          "client_id": "912869749740-08kmhnkujhi9fgej8ur5uql5rbt0ehug.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmf_sm1k0BRVy4__Cnr6HpYo1niMRuQH0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "912869749740-08kmhnkujhi9fgej8ur5uql5rbt0ehug.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

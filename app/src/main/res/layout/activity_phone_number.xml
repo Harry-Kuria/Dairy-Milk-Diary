@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="fill_parent"
+        android:layout_height="400dip"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/wave7" />
+    <TextView
+        android:textSize="20.0sp"
+        android:textColor="#ff1e88e5"
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/imageView2"
+        android:layout_height="wrap_content"
+        android:text="Please enter your Phone Number" />
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dip"
+        android:hint="eg. +254123456789"
+        android:ems="10"
+        android:layout_below="@id/textView4"
+        android:inputType="phone"
+        android:layout_marginStart="70.0dip"
+        android:layout_marginEnd="70.0dip"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70.0dip"
+        android:layout_marginLeft="70.0dip"
+        android:layout_marginEnd="70.0dip"
+        android:layout_below="@id/editText"
+        android:layout_marginRight="70.0dip"
+        android:background="#ff1e88e5"
+        android:text="CONTINUE"
+        android:textColor="#ffffffff"
+        android:textSize="20.0sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No Internet Connection"
+        android:id="@+id/noInternet1"
+        android:textSize="20dip"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+</RelativeLayout>

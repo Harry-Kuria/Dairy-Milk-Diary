@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/addFarmers"
+        android:title="Add farmers to list" />
+    <item
+        android:id="@+id/viewFarmerRecords"
+        android:title="View Farmers Records" />
+    <item
+        android:id="@+id/logout"
+        android:title="Logout" />
+</menu>

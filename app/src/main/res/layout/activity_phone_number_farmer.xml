@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhoneNumberFarmer">
+
+    <ImageView
+        android:id="@id/imageView2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="400.0dip"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wave7" />
+    <TextView android:textSize="20.0sp"
+        android:textColor="#ff1e88e5"
+        android:id="@id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="81.0dip"
+        android:layout_marginBottom="300.0dip"
+        android:text="Please enter your Phone Number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView2" />
+    <EditText
+        android:id="@id/editText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="95.0dip"
+        android:layout_marginBottom="157.0dip"
+        android:hint="eg. +254123456789"
+        android:ems="10"
+        android:inputType="phone"
+        android:layout_marginStart="70.0dip"
+        android:layout_marginEnd="70.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView4" />
+
+    <Button android:textSize="20.0sp"
+        android:textColor="#ffffffff"
+        android:id="@id/button"
+        android:background="#ff1e88e5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70.0dip"
+        android:layout_marginTop="33.0dip"
+        android:layout_marginRight="70.0dip"
+        android:onClick="ToAuthentication"
+        android:layout_marginBottom="53.0dip"
+        android:text="CONTINUE"
+        android:layout_marginStart="70.0dip"
+        android:layout_marginEnd="70.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
