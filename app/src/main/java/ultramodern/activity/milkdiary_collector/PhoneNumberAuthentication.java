@@ -1,18 +1,24 @@
 package ultramodern.activity.milkdiary_collector;
 
+import static android.widget.Toast.LENGTH_LONG;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 //import com.google.android.gms.tasks.OnCompleteListener;
 //import com.google.android.gms.tasks.Task;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
 //import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
@@ -34,19 +40,36 @@ public class PhoneNumberAuthentication extends AppCompatActivity implements View
             PhoneNumberAuthentication.this.verificationId = param1String;
         }
 
-        public void onVerificationCompleted(@NonNull PhoneAuthCredential param1PhoneAuthCredential) {}
+        @Override
+        public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
+
+            Toast.makeText(getApplicationContext(),"Verifying code Automatically",LENGTH_LONG).show();
+
+            signInWithPhoneAuthCredential(phoneAuthCredential);
+
+        }
 
         public void onVerificationFailed(@NonNull FirebaseException param1FirebaseException) {}
     };
 
     String verificationId;
 
-    private void signInWithPhoneAuthCredential(PhoneAuthCredential paramPhoneAuthCredential) { this.auth.signInWithCredential(paramPhoneAuthCredential).addOnCompleteListener(param1Task -> {
-        if (param1Task.isSuccessful()) {
-            Intent intent = new Intent(PhoneNumberAuthentication.this.getApplicationContext(), gettingready.class);
-            PhoneNumberAuthentication.this.startActivity(intent);
-        }
+    private void signInWithPhoneAuthCredential(PhoneAuthCredential paramPhoneAuthCredential) {
+
+        auth.signInWithCredential(paramPhoneAuthCredential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+
+                if (task.isSuccessful()) {
+                    Intent intent = new Intent(PhoneNumberAuthentication.this.getApplicationContext(), gettingready.class);
+                    PhoneNumberAuthentication.this.startActivity(intent);
+                }
+                else{
+                    Toast.makeText(PhoneNumberAuthentication.this, "Verification not successful", Toast.LENGTH_SHORT).show();
+                }
+            }
     }); }
+
 
     private void verification(String paramString) {
         PhoneAuthOptions options = PhoneAuthOptions.newBuilder(auth).setPhoneNumber(paramString).setTimeout(60L, TimeUnit.SECONDS)

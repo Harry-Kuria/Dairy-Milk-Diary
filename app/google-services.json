@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "162446700454-g7crivtll7qt1v9fbenbkvpol4n72j2v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ultramodern.activity.milkdiary_collector",
+            "certificate_hash": "4a99127a44f3e0c3aeff62fff40c624d72a6e5a2"
+          }
+        },
+        {
           "client_id": "162446700454-s9cn5t5im59lbvng6o2p1nt0jfrht28s.apps.googleusercontent.com",
           "client_type": 3
         }
