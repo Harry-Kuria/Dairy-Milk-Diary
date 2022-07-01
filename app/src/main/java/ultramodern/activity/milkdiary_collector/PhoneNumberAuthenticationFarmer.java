@@ -29,7 +29,7 @@ public class PhoneNumberAuthenticationFarmer extends AppCompatActivity {
 
         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
         this.auth = firebaseAuth;
-        firebaseAuth.setLanguageCode("fr");
+        firebaseAuth.setLanguageCode("en");
         verification(getIntent().getStringExtra("phonenumber"));
     }
     private final PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {

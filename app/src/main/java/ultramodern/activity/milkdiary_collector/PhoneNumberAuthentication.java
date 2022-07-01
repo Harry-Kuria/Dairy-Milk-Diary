@@ -78,24 +78,39 @@ public class PhoneNumberAuthentication extends AppCompatActivity implements View
                 .build();
         PhoneAuthProvider.verifyPhoneNumber(options);
     }
+    // PhoneAuthProvider.getInstance().verifyPhoneNumber(paramString, 60L, TimeUnit.SECONDS, this, this.mCallbacks); }
+
     private void verifyCode(String paramString) { signInWithPhoneAuthCredential(PhoneAuthProvider.getCredential(this.verificationId, paramString)); }
 
+    public void VerifyingInput(View paramView){
+        EditText codeInput = findViewById(R.id.editText2Farmer);
+        if (codeInput.getText().length()==0){
+            codeInput.setError("Code is required!");
+        }
+        else if (codeInput.getText().length()<4){
+            codeInput.setError("Please input a valid code");
+        }
+        else if (codeInput.getText().length()>4 && codeInput.getText().length()<6){
+            codeInput.setError("Please input a valid code");
+        }
+        else {
+            verifyCode(codeInput.getText().toString());
+        }
+
+    }
     public void onClick(View paramView) { verifyCode(this.editText2.getText().toString()); }
 
-    @SuppressLint("SetTextI18n")
+
     protected void onCreate(Bundle paramBundle) {
         super.onCreate(paramBundle);
         setContentView(R.layout.activity_phone_number_authentication);
-        EditText editText = findViewById(R.id.editText2);
-        this.editText2 = editText;
-        if (editText.length() == 0)
-            this.editText2.setText("Code required");
-        Button button = findViewById(R.id.button2);
-        this.button2 = button;
-        button.setOnClickListener(this);
+
         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
         this.auth = firebaseAuth;
-        firebaseAuth.setLanguageCode("fr");
+        firebaseAuth.setLanguageCode("en");
         verification(getIntent().getStringExtra("phonenumber"));
+
+
+
     }
 }
